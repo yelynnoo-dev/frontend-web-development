@@ -34,8 +34,9 @@ function createReviewElements(review) {
     const div = document.createElement("div");
     div.className = "voice";
 
+    const emptyStars = 5 - review.stars;
     const stars = document.createElement("h4");
-    stars.textContent = "☆".repeat(review.stars);
+    stars.textContent = "★".repeat(review.stars) + "☆".repeat(emptyStars);
 
     const text = document.createElement("p");
     text.textContent = review.text;
